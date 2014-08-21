@@ -1,0 +1,9 @@
+C:\Users\Sean\Box Sync\VS2013\ConsoleApps\MotionSerialTalker\MotionSerialTalker\bin\Debug\MotionSerialTalker.exe.config
+C:\Users\Sean\Box Sync\VS2013\ConsoleApps\MotionSerialTalker\MotionSerialTalker\bin\Debug\MotionSerialTalker.exe
+C:\Users\Sean\Box Sync\VS2013\ConsoleApps\MotionSerialTalker\MotionSerialTalker\bin\Debug\MotionSerialTalker.pdb
+C:\Users\Sean\Box Sync\VS2013\ConsoleApps\MotionSerialTalker\MotionSerialTalker\obj\Debug\MotionSerialTalker.csprojResolveAssemblyReference.cache
+C:\Users\Sean\Box Sync\VS2013\ConsoleApps\MotionSerialTalker\MotionSerialTalker\obj\Debug\MotionSerialTalker.exe
+C:\Users\Sean\Box Sync\VS2013\ConsoleApps\MotionSerialTalker\MotionSerialTalker\obj\Debug\MotionSerialTalker.pdb
+C:\Users\Sean\Box Sync\VS2013\ConsoleApps\MotionSerialTalker2\MotionSerialTalker\bin\Debug\MotionSerialTalker.exe.config
+C:\Users\Sean\Box Sync\VS2013\ConsoleApps\MotionSerialTalker2\MotionSerialTalker\obj\Debug\MotionSerialTalker.exe
+C:\Users\Sean\Box Sync\VS2013\ConsoleApps\MotionSerialTalker2\MotionSerialTalker\obj\Debug\MotionSerialTalker.pdb
