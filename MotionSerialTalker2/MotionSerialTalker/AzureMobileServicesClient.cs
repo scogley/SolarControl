@@ -16,12 +16,33 @@ namespace MotionSerialTalker
         }
         public MobileServiceClient ConnectAzureMobileServicesClient()
         {
-            MobileServiceClient client = new MobileServiceClient("https://pptsync.azure-mobile.net/", "OFfCSDPLhLjBKIgBYlwQByqXgmASHH43");
+            MobileServiceClient client = new MobileServiceClient("https://solarcontrol.azure-mobile.net/login/aad", "ZBaAvirmKzAGFXrHmjfRHSyrdCVdek84");
             return client;
         }
 
         public async void UpdateAzureTable(string time, string id)
         {
+            //// using a class and object instance
+            //AzureMobileServicesClient azm = new AzureMobileServicesClient();
+            //MobileServiceClient newclient = azm.ConnectAzureMobileServicesClient();
+            //newclient.GetTable<TodoItem>();
+            //azm.todoTable = newclient.GetTable<TodoItem>();
+
+            //TodoItem newItem = new TodoItem();
+            //newItem.Text = time;
+            //newItem.Complete = false;
+            //newItem.Id = id;
+            //// update the record specified by unique id
+            //try
+            //{
+            //    await azm.todoTable.UpdateAsync(newItem);
+            //}
+
+            //catch (Exception e)
+            //{
+            //    e.ToString();
+            //}
+
             // using a class and object instance
             AzureMobileServicesClient azm = new AzureMobileServicesClient();
             MobileServiceClient newclient = azm.ConnectAzureMobileServicesClient();
@@ -42,7 +63,6 @@ namespace MotionSerialTalker
             {
                 e.ToString();
             }
-            
         }
 
         // This is a FIELD initializer. For Objects that are an instance of this class 

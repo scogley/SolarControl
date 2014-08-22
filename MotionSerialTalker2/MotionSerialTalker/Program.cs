@@ -19,7 +19,7 @@ namespace MotionSerialTalker
     {
         static void Main(string[] args)
         {           
-            // Arduino Mega 2560 defaults to COM3 on my PC
+            // Arduino Mega 2560 defaults to COM4 on my PC
             // serial port sample code: http://msdn.microsoft.com/en-us/library/system.io.ports.serialport.datareceived(v=vs.110).aspx
             SerialPort mySerialPort = new SerialPort("COM4");
 
@@ -33,7 +33,9 @@ namespace MotionSerialTalker
 
             mySerialPort.Open();
 
-            Console.WriteLine("Press any key to continue...");
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("Solar Monitor: Reading analog port 0 for voltage generated from the Sun");
+            Console.WriteLine("Press any key to quit...");
             Console.WriteLine();
             Console.ReadKey();
             mySerialPort.Close();
@@ -42,16 +44,17 @@ namespace MotionSerialTalker
         private static void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
         {
             SerialPort sp = (SerialPort)sender;
-            string indata = sp.ReadExisting();            
+            string indata = sp.ReadExisting();
+            string time = DateTime.Now.ToString("h:mm:ss");
             //Console.WriteLine("Data Received:");            
             Console.Write(indata);
-            //string time = DateTime.Now.ToString("h:mm:ss");
+            
             //Console.WriteLine("Motion Detected at: " + time);                       
                         
                                   
-            //string id = "seancogley";
-            //AzureMobileServicesClient client = new AzureMobileServicesClient();
-            //client.UpdateAzureTable(time, id);
+            string id = "seancogley";
+            AzureMobileServicesClient client = new AzureMobileServicesClient();
+            client.UpdateAzureTable(time, id);
         }
 
         //private static void SpeakConsoleText(string speakThis)
