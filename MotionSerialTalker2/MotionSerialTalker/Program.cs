@@ -21,7 +21,11 @@ namespace MotionSerialTalker
         {           
             // Arduino Mega 2560 defaults to COM4 on my PC
             // serial port sample code: http://msdn.microsoft.com/en-us/library/system.io.ports.serialport.datareceived(v=vs.110).aspx
-            SerialPort mySerialPort = new SerialPort("COM4");
+            //Console.WriteLine("enter serial port number for Arduino");
+            //string serialPort = Console.ReadLine();
+            //serialPort = "COM" + serialPort;
+            //SerialPort mySerialPort = new SerialPort(serialPort);
+            SerialPort mySerialPort = new SerialPort("COM3");
 
             mySerialPort.BaudRate = 9600;
             mySerialPort.Parity = Parity.None;
@@ -45,58 +49,12 @@ namespace MotionSerialTalker
         {
             SerialPort sp = (SerialPort)sender;
             string indata = sp.ReadExisting();
-            string time = DateTime.Now.ToString("h:mm:ss");
-            //Console.WriteLine("Data Received:");            
+            string time = DateTime.Now.ToString("h:mm:ss");            
             Console.Write(indata);
-            
-            //Console.WriteLine("Motion Detected at: " + time);                       
-                        
-                                  
-            string id = "seancogley";
-            AzureMobileServicesClient client = new AzureMobileServicesClient();
-            client.UpdateAzureTable(time, id);
+                                                          
+            //string id = "seancogley";
+            //AzureMobileServicesClient client = new AzureMobileServicesClient();
+            //client.UpdateAzureTable(time, id);
         }
-
-        //private static void SpeakConsoleText(string speakThis)
-        //{
-        //    SpeechSynthesizer synth = new SpeechSynthesizer();
-        //    //synth.SelectVoice("Microsoft Hazel Desktop");
-        //    synth.SelectVoice("Microsoft David Desktop");
-        //    //synth.SelectVoice("Microsoft Zira Desktop");
-        //    //var voices = synth.GetInstalledVoices();
-        //    //foreach (var voice in voices)
-        //    //{
-        //    //    Console.WriteLine(voice.ToString());
-        //    //}
-
-        //    //string speakThis = Console.ReadLine();                        
-        //    //string speakThis = "Perimeter has been compromised. Lock on phasers and fire at will!!!!";
-        //    //string speakThis = "I see you!";                        
-        //    //string speakThis = "Intruder alert!!!! Activating defense protocol Alpha 1.";
-        //    //string speakThis = "Halt! Who goes there?";
-            
-        //    synth.Speak(speakThis);
-
-        //}
-
-        //private static void launchPandora()
-        //{
-            
-        //    Process[] pname = Process.GetProcessesByName("iexplore");
-        //    if (pname.Length == 0)
-        //    {
-        //        string speakThis = "Greetings, master! Welcome Home. It is currently " + DateTime.Now.ToString("h:mm");
-        //        SpeakConsoleText(speakThis);
-        //        //speakThis = "Shawn loves you very much and asked me to play some nice music for you. Enjoy!";
-        //        speakThis = "I have a message for you from Shawn. Rosa, I love your sexy petite little body and I want to fuck your brains out tonight!";
-        //        SpeakConsoleText(speakThis);
-        //        //System.Threading.Thread.Sleep(3000);
-        //        Process.Start(@"C:\Program Files\Internet Explorer\iexplore.exe");
-        //    }   
-        //    else
-        //    {
-        //        Console.WriteLine("Pandora is already running, going back to sleep");
-        //    }
-        //}
     }
 }
