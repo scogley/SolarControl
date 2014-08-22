@@ -16,7 +16,7 @@ namespace MotionSerialTalker
         }
         public MobileServiceClient ConnectAzureMobileServicesClient()
         {
-            MobileServiceClient client = new MobileServiceClient("https://solarcontrol.azure-mobile.net/login/aad", "ZBaAvirmKzAGFXrHmjfRHSyrdCVdek84");
+            MobileServiceClient client = new MobileServiceClient("https://solarcontrol.azure-mobile.net/", "ZBaAvirmKzAGFXrHmjfRHSyrdCVdek84");
             return client;
         }
 
